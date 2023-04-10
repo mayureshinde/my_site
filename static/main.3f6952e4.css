@@ -4074,7 +4074,7 @@ a.badge:hover {
     cursor: pointer;
 }
 .alert {
-    padding: 15px;
+    padding: 3px;
     margin-bottom: 19px;
     border: 1px solid transparent;
     border-radius: 0;
@@ -4105,7 +4105,7 @@ a.badge:hover {
     color: inherit;
 }
 .alert-success {
-    background-color: #000;
+    background-color: #383838;
     border-color: #000;
     color: #fff;
 }
@@ -4193,7 +4193,7 @@ a.badge:hover {
     filter: alpha(opacity=50);
 }
 button.close {
-    padding: 0;
+    padding: 5px;
     cursor: pointer;
     background: transparent;
     border: 0;

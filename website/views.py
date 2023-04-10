@@ -24,4 +24,18 @@ def contact(request):
     return render(request, "contact.html")
 
 def home(request):
-    return render(request, "index.html")          
+    return render(request, "index.html")
+
+def contact_form(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Contact request submitted successfully.')
+            return render(request, 'contact-form.html', {'form': ContactForm(request.GET)})
+        else:
+            messages.error(request, 'Invalid form submission.')
+            messages.error(request, form.errors)
+    else:
+        form = ContactForm()
+    return render(request, 'contact-form.html', {'form': form})
